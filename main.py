@@ -1,4 +1,4 @@
-file = open("text.txt", "rt", encoding = "utf-8")
+file = open("text.txt", encoding = "utf-8")
 text = file.read()
 print("Кількість слів у рядку: " + str(len(text.split())))
 len = 0
