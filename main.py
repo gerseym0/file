@@ -1,8 +1,11 @@
-file = open("text.txt", encoding = "utf-8")
-text = file.read()
-print("Кількість слів у рядку: " + str(len(text.split())))
-len = 0
-for с in text:
-    if с != ' ':
-        len += 1        
-print("Кількість символів в рядку: " + str(len))
+file = open("text.txt", "rt", encoding = "utf-8")
+line = file.readlines()
+i = 0
+for string in line:
+    i += 1
+    print(f"Кількість слів у рядку {i}: " + str(len(string.split())))
+    length = 0
+    for symbol in string:
+        if symbol != ' ':
+            length += 1
+    print(f"Кількість символів у рядку {i}: " + str(length))
